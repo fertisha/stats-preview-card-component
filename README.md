@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [My github repo]()
-- Live Site URL: [Add live site URL here]()
+- Solution URL: [My github repo](https://github.com/fertisha/stats-preview-card-component.git)
+- Live Site URL: [Add live site URL here](https://fertisha.github.io/stats-preview-card-component/)
 
 
 ### Built with
@@ -49,7 +49,3 @@ I am starting to learn how to use @media code in my css. I have learned using :r
 ### Useful resources
 
 - [Flexbox tutorial](https://youtu.be/k32voqQhODc) - This video helped me figure out Flexbox
-
-## Author
-
-- Website - [Fatemeh](https://www.your-site.com)
