@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+background-color: var(--main-bg);
+font-family: 'Inter', sans-serif;
+
+}
+/* the following code is defined to make finding the
+colors easier*/
+:root {
+  --main-bg: hsl(233,47%,7%);
+  --card-bg: hsl(244, 38%, 16%);
+  --acent: hsl(277, 64%, 61%);
+  --main-pg: hsla(0, 0%, 100%, 0.75);
+  --stats-hd: hsla(0, 0%, 100%, 0.6);
+}
+.container {
+  width: 100vw; /*These number are just a guess*/
+  height: 100vh;
+  background: var(--main-bg);
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; /*After applying the flex displays
+  to the main container you have to change the align and the
+  justify-content so the position of the card gets changed*/
+}
+.card {
+  width: 70vw;
+  background-color: var(--card-bg);
+  border-radius: 7px; /*this is used to change the borders to round*/
+  display: flex; /*we define flex here so if the image is hidden it will pop up*/
+}
+
+.desc {
+  width: 50%; /*this width will determine the position of the image, it will make the text and the image side by side*/
+  padding: 4rem; /*the number is approximate and will change the position of our desc*/
+}
+h1 {
+  font-size: 2rem;
+}
+span {
+  color: var(--acent); /*using root and var will make it easier to find the color */
+font-size: 2rem;
+}
+p { color: var(--main-pg);
+  margin: 1.5rem 0 3rem 0; /*this margin will define a space between header and the bottom, numbers were approximate*/
+
+}
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: 1px;
+}
+.number {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.name {
+  text-transform: uppercase;
+  color: var(--stats-hd);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+.card-img {
+  width: 50%;
+  background:linear-gradient( /*linear-gradient() CSS function creates an image consisting of a progressive
+   transition between two or more colors along a straight line*/
+    0deg,
+    hsla(277, 64%, 61%, 0.5) 0%, /*the transparency will not work if you do not use 0% and 100%*/
+    hsla(277, 64%, 61%, 0.5) 100%
+    ), /*we use this code to apply the transparency on the image*/
+    url(../images/image-header-desktop.jpg) center no-repeat;
+     /*you should use background as reference to image because it
+  should cover all the container of card-img*/
+  border-radius: 0 7px 7px 0;
+background-size: cover;
+}
+.attribution {
+   font-size: 11px; text-align: center;
+   color: var(--main-pg)
+ }
+.attribution a {
+  font-size: 11px;
+  color: var(--main-pg);
+}
+/*Responsive*/ /*The following codes are used to make the appearnce appealing for the smaller media like cellphones*/
+
+@media (max-width: 700px) {
+  .card {
+    flex-direction: column-reverse;; /*This is used to change the direction of image for smaller screens*/
+    justify-content: space-between;
+    width: 98vh;
+    height:90vh;
+  }
+  .desc {
+    width: auto;
+    height: 70%;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  .stats {
+    flex-direction: column;
+  }
+  .name {
+    margin-bottom: 2rem;
+  }
+  .card-img {
+    height: 30%;
+    width: 100%;
+    border-radius: 7px 7px 0 0;
+  }
+
+}
